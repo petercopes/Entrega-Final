@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: entregafinal-v1
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+    timeOfLife: 60000
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/entregafinal
+      database: entregafinal
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: pedrocopescoderhouse@gmail.com
+    password: egffrtciakjlxjsj
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+          starttls:
+            enable: true
+
+server:
+  port: 8080
+  error:
+    include-message: always
+jwt:
+  expiration: 1800000
+  secret: springbootjwtcoderhouse
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refres
+
